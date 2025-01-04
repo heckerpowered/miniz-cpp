@@ -24,3 +24,11 @@ int main(){
     std::clog << "Saved to test.zip" << std::endl;
 }
 ```
+
+## Build
+
+```cpp
+cd .\build\
+cmake ..
+cmake --build .
+```
