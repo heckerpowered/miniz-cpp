@@ -1,4 +1,24 @@
 miniz-cpp
 =========
 
-A cross-platform header-only library for reading and writing ZIP files using a nice simple API similar to [Python's zipfile](https://docs.python.org/3/library/zipfile.html). See [examples/](https://github.com/tfussell/miniz-cpp/tree/master/examples) for a demonstration of the use of the library.
+使用示例：
+
+```cpp
+#include <iostream>
+#include "zip_file.hpp"
+
+int main(){
+    miniz_cpp::zip_file zip;
+
+    // 将 test.txt 写入压缩包的根目录
+    zip.write("./test.txt", "test.txt");
+
+    // 将 1MB_file.dat 写入压缩包的根目录
+    zip.write("./1MB_file.dat", "1MB_file.dat");
+
+    // 保存到 test.zip
+    zip.save("miniz_cpp.zip");
+    
+    std::clog << "Saved to test.zip" << std::endl;
+}
+```
