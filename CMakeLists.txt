@@ -4,11 +4,14 @@ project(miniz-cpp)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
+
 set(EXAMPLE_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/pipe.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/read.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/write.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/unzip.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/examples/recursive_zip.cpp
 )
 
 foreach(EXAMPLE_SOURCE IN ITEMS ${EXAMPLE_SOURCES})

@@ -30,6 +30,7 @@ bool extract_zip(const std::string& zip_path, const std::string& output_dir) {
                     std::cerr << "创建文件失败：" << output_file_path << std::endl;
                     return false;
                 }
+                // 从 zip 中读取对应文件并写入到输出文件
                 output_file << file.read(zip_info.filename);
             }
         }
