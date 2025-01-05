@@ -11,7 +11,7 @@
 #include <unistd.h> // For fileno, isatty
 #endif
 
-#include <zip_file.hpp>
+#include "../zip_file.hpp"
 
 namespace {
 
@@ -33,12 +33,7 @@ bool is_tty()
 int main(int argc, char *argv[])
 {
     miniz_cpp::zip_file file;
-    std::vector<std::string> args;
-    
-    for(int i = 1; i < argc; i++)
-    {
-        args.push_back(argv[i]);
-    }
+    std::vector<std::string> args(argv + 1, argv + argc);
     
     if(is_tty()) // Expect first argument to be zip file path
     {
