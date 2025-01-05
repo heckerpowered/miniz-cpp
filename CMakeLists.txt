@@ -1,13 +1,15 @@
 cmake_minimum_required(VERSION 3.2)
 project(miniz-cpp)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(EXAMPLE_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/pipe.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/examples/read.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/examples/write.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/examples/write.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/examples/unzip.cpp
+)
 
 foreach(EXAMPLE_SOURCE IN ITEMS ${EXAMPLE_SOURCES})
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
