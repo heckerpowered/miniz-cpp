@@ -2,7 +2,9 @@
 
 ## 使用方式
 
-直接将 `zip_file.hpp` 头文件拷贝到项目中即可。经过测试，在 `Ubuntu 22.04 x86_64` 上使用 gcc 12 编译器没有问题。
+直接将 `zip_file.hpp` 头文件拷贝到项目中即可。
+
+经过测试，在 `Ubuntu 22.04 x86_64` 上使用 gcc 12 编译器以及 windows11 中使用 visual studio2022 工具链没有问题。
 
 ## 使用示例
 
@@ -25,9 +27,14 @@ int main(){
 }
 ```
 
+更多示例参见 examples 文件夹。
+
 ## Build
 
 ```cpp
+git clone https://github.com/Mq-b/miniz-cpp
+cd miniz-cpp
+mkdir build
 cd .\build\
 cmake ..
 cmake --build .
